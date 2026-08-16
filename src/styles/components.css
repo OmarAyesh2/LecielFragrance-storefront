@@ -12,7 +12,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   transition: transform var(--transition-base);
 }
 
@@ -46,11 +46,11 @@
 }
 
 .desktop-only {
-  display: none;
+  display: none !important;
 }
 @media (min-width: 768px) {
   .desktop-only {
-    display: block;
+    display: inherit !important;
   }
 }
 
@@ -117,7 +117,13 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .nav-actions {
+    gap: var(--space-6);
+  }
 }
 
 .icon-btn {
@@ -703,16 +709,27 @@
 }
 
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: var(--space-4);
   width: 100%;
-  justify-content: center;
+  padding-bottom: var(--space-4);
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
+.category-grid::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 640px) {
   .category-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
+    overflow-x: visible;
+    flex-wrap: wrap;
+    scroll-snap-type: none;
   }
 }
 @media (min-width: 1024px) {
@@ -731,9 +748,17 @@
   text-align: center;
   gap: var(--space-4);
   transition: transform var(--transition-slow);
-  max-width: 280px;
-  margin: 0 auto;
   width: 100%;
+  flex: 0 0 calc(45% - var(--space-2));
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .category-card {
+    max-width: 280px;
+    margin: 0 auto;
+    flex: none;
+  }
 }
 
 .category-card:hover {
@@ -870,10 +895,19 @@
 
 .product-info-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: var(--space-4);
+  gap: var(--space-1);
   margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .product-info-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
 }
 
 .product-name {
@@ -893,8 +927,14 @@
   font-size: var(--text-base);
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   min-width: max-content;
+}
+
+@media (min-width: 768px) {
+  .product-price {
+    align-items: flex-end;
+  }
 }
 
 .price-original {
