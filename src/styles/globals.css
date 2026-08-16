@@ -12,11 +12,19 @@
   padding: 0;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--color-bg-primary);
   background-image: 
     radial-gradient(circle at 80% -20%, rgba(184, 144, 77, 0.04), transparent 40%),
