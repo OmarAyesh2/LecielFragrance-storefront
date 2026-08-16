@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المجموعة",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "cart": "الحقيبة",
+    "signIn": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "profile": "الملف الشخصي",
+    "search_placeholder": "ابحث عن المنتجات..."
+  },
+  "home": {
+    "trust_organic": "عضوي 100%",
+    "trust_premium": "جودة فاخرة",
+    "trust_delivery": "توصيل سريع",
+    "view_all": "عرض الكل",
+    "add_to_cart": "أضف إلى الحقيبة",
+    "bestsellers_title": "مجموعة التوقيع"
+  },
+  "shop": {
+    "title": "المجموعة",
+    "all_categories": "جميع العائلات العطرية",
+    "all_products": "المجموعة الكاملة",
+    "in_stock_only": "المتوفر فقط",
+    "sort_by": "ترتيب حسب",
+    "sort_bestsellers": "مجموعة التوقيع",
+    "sort_newest": "أحدث الإصدارات",
+    "sort_price_low": "السعر: تصاعدي",
+    "sort_price_high": "السعر: تنازلي",
+    "sort_price_low_high": "السعر: تصاعدي",
+    "sort_price_high_low": "السعر: تنازلي",
+    "no_products": "لم يتم العثور على إبداعات في هذه المجموعة.",
+    "no_products_found": "لم يتم العثور على إبداعات في هذه المجموعة.",
+    "try_different_filters": "يرجى استكشاف عائلاتنا العطرية الأخرى.",
+    "out_of_stock": "نفذ من المخزون",
+    "sale": "تخفيض"
+  },
+  "product": {
+    "add_to_cart": "أضف إلى الحقيبة",
+    "out_of_stock": "نفذ من المخزون",
+    "in_stock": "متوفر",
+    "low_stock": "الكمية محدودة",
+    "quantity": "الكمية",
+    "reviews_title": "تقييمات العملاء",
+    "write_review": "اكتب تقييماً",
+    "submit_review": "إرسال التقييم",
+    "ingredients": "المكونات",
+    "benefits": "الفوائد",
+    "usage": "طريقة الاستخدام",
+    "description": "الوصف"
+  },
+  "cart": {
+    "title": "مجموعتك",
+    "empty": "مجموعتك فارغة",
+    "subtotal": "المجموع الفرعي",
+    "checkout": "إتمام الطلب",
+    "remove": "إزالة",
+    "quantity": "الكمية"
+  },
+  "checkout": {
+    "title": "إتمام الطلب",
+    "delivery": "توصيل للمنزل",
+    "pickup": "استلام من المتجر",
+    "pickup_free": "مجاني",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "address": "العنوان",
+    "governorate": "المحافظة",
+    "select_governorate": "اختر المحافظة",
+    "payment_method": "طريقة الدفع",
+    "cod": "الدفع عند الاستلام",
+    "cliq": "كليك",
+    "place_order": "إتمام الشراء",
+    "delivery_fee": "رسوم التوصيل",
+    "total": "المجموع الكلي",
+    "order_success": "تم تقديم الطلب بنجاح!",
+    "order_id": "رقم الطلب",
+    "continue_shopping": "متابعة التسوق"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة",
+    "privacy": "سياسة الخصوصية",
+    "terms": "الشروط والأحكام",
+    "shipping_policy": "سياسة الشحن"
+  },
+  "auth": {
+    "sign_in": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "full_name": "الاسم الكامل",
+    "no_account": "ليس لديك حساب؟",
+    "have_account": "لديك حساب بالفعل؟"
+  }
+}

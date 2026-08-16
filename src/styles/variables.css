@@ -1,0 +1,60 @@
+:root {
+  /* Color Palette - Parisian Light Theme */
+  --color-bg-primary: #FAFAF9; /* Warm alabaster */
+  --color-bg-secondary: #F5F5F4;
+  --color-bg-tertiary: #E7E5E4;
+  --color-surface: #FFFFFF; /* Pure white for cards */
+  --color-border: #E5E5E5;
+  --color-border-hover: #D4D4D8;
+  --color-text-primary: #1C1917; /* Soft black */
+  --color-text-secondary: #57534E;
+  --color-text-tertiary: #A8A29E;
+  --color-accent: #B8904D; /* Elegant muted gold */
+  --color-accent-hover: #A17D42;
+  --color-accent-muted: rgba(184, 144, 77, 0.1);
+  
+  /* Glassmorphism removed, replaced with subtle translucent surfaces */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+  --color-success: #15803D;
+  --color-error: #B91C1C;
+  --color-warning: #D97706;
+
+  /* Typography */
+  --font-display: var(--font-playfair, 'Playfair Display'), serif;
+  --font-body: var(--font-inter, 'Inter'), sans-serif;
+  --font-mono: var(--font-jetbrains, 'JetBrains Mono'), monospace;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Shadows - Lightened for luxury feel */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  --shadow-glow: 0 0 20px rgba(184, 144, 77, 0.15);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}

@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "The Collection",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Bag",
+    "signIn": "Sign In",
+    "register": "Register",
+    "profile": "Profile",
+    "search_placeholder": "Search..."
+  },
+  "home": {
+    "trust_organic": "100% Organic",
+    "trust_premium": "Premium Quality",
+    "trust_delivery": "Fast Delivery",
+    "view_all": "View All",
+    "add_to_cart": "Add to Bag",
+    "bestsellers_title": "Signature Collection"
+  },
+  "shop": {
+    "title": "The Collection",
+    "all_categories": "All Olfactory Families",
+    "all_products": "The Complete Collection",
+    "in_stock_only": "In Stock Only",
+    "sort_by": "Sort By",
+    "sort_bestsellers": "Signature Collection",
+    "sort_newest": "Latest Arrivals",
+    "sort_price_low": "Price: Ascending",
+    "sort_price_high": "Price: Descending",
+    "sort_price_low_high": "Price: Ascending",
+    "sort_price_high_low": "Price: Descending",
+    "no_products": "No creations found in this selection.",
+    "no_products_found": "No creations found in this selection.",
+    "try_different_filters": "Please explore our other olfactory families.",
+    "out_of_stock": "Out of Stock",
+    "sale": "Sale"
+  },
+  "product": {
+    "add_to_cart": "Add to Bag",
+    "out_of_stock": "Out of Stock",
+    "in_stock": "In Stock",
+    "low_stock": "Low Stock",
+    "quantity": "Quantity",
+    "reviews_title": "Reviews",
+    "write_review": "Write a Review",
+    "submit_review": "Submit Review",
+    "ingredients": "Ingredients",
+    "benefits": "Benefits",
+    "usage": "How to Use",
+    "description": "Description"
+  },
+  "cart": {
+    "title": "Your Selection",
+    "empty": "Your selection is empty",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Qty"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "pickup_free": "Free Pickup",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "address": "Delivery Address",
+    "governorate": "Governorate",
+    "select_governorate": "Select Governorate",
+    "payment_method": "Payment Method",
+    "cod": "Cash on Delivery",
+    "cliq": "CliQ",
+    "place_order": "Complete Purchase",
+    "delivery_fee": "Delivery Fee",
+    "total": "Total",
+    "order_success": "Order Placed Successfully",
+    "order_id": "Order ID",
+    "continue_shopping": "Continue Shopping"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "shipping_policy": "Shipping Policy"
+  },
+  "auth": {
+    "sign_in": "Sign In",
+    "register": "Create Account",
+    "email": "Email Address",
+    "password": "Password",
+    "full_name": "Full Name",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?"
+  }
+}

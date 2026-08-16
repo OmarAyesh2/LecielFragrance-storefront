@@ -1,0 +1,45 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slideInDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.animate-fade-in, .animate-fadeIn { animation: fadeIn var(--transition-base) forwards; }
+.animate-fade-in-up, .animate-fadeInUp { animation: fadeInUp var(--transition-base) forwards; }
+.animate-slide-in-right, .animate-slideInRight { animation: slideInRight var(--transition-base) forwards; }
+.animate-slide-in-down, .animate-slideInDown { animation: slideInDown var(--transition-base) forwards; }
+.animate-scale-in, .animate-scaleIn { animation: scaleIn var(--transition-base) forwards; }
+.animate-shimmer {
+  background: linear-gradient(to right, var(--color-bg-secondary) 8%, var(--color-bg-tertiary) 18%, var(--color-bg-secondary) 33%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear forwards;
+}
