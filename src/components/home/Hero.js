@@ -10,6 +10,7 @@ export default function Hero({ settings }) {
   const subtext = settings ? settings[`hero_subtext_${lang}`] : 'Luxury organic fragrances crafted with the finest ingredients.';
   const imageUrl = settings?.hero_image_url || 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=2000';
   const ctaLink = settings?.hero_cta_link || '/shop';
+  const ctaText = settings ? settings[`hero_cta_text_${lang}`] : t('home.view_all');
 
   return (
     <section className="hero-split">
@@ -17,7 +18,7 @@ export default function Hero({ settings }) {
         <h1 className="hero-title">{headline}</h1>
         <p className="hero-subtext">{subtext}</p>
         <Link href={ctaLink} className="btn-primary" style={{ display: 'inline-block', width: 'auto', padding: 'var(--space-3) var(--space-8)', fontSize: 'var(--text-lg)' }}>
-          {t('home.view_all')}
+          {ctaText}
         </Link>
       </div>
       <div className="hero-split-image">

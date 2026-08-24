@@ -27,8 +27,8 @@ body {
   overflow-x: hidden;
   background-color: var(--color-bg-primary);
   background-image: 
-    radial-gradient(circle at 80% -20%, rgba(184, 144, 77, 0.04), transparent 40%),
-    radial-gradient(circle at 10% 110%, rgba(184, 144, 77, 0.03), transparent 40%);
+    radial-gradient(circle at 80% -20%, rgba(196, 160, 104, 0.06), transparent 40%),
+    radial-gradient(circle at 10% 110%, rgba(196, 160, 104, 0.04), transparent 40%);
   background-attachment: fixed;
   color: var(--color-text-primary);
   font-family: var(--font-body);

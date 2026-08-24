@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import { useCart } from '@/context/CartContext';
+import { useToast } from '@/context/ToastContext';
 
 export default function ProductCard({ product }) {
   const { lang, t } = useLanguage();
   const { addToCart } = useCart();
+  const { addToast } = useToast();
 
   let isSale = product.sale_price && product.sale_price < product.base_price;
   let isOutOfStock = product.stock_quantity === 0;
@@ -41,6 +43,8 @@ export default function ProductCard({ product }) {
       price: currentPrice,
       quantity: 1
     });
+
+    addToast(lang === 'ar' ? 'تمت الإضافة إلى الحقيبة!' : 'Added to bag!');
   };
 
   return (
@@ -61,24 +65,24 @@ export default function ProductCard({ product }) {
       </Link>
       
       <div className="product-details">
-        <div className="product-info-row">
-          <h3 className="product-name" title={product[`name_${lang}`]}>
-            <Link href={`/product/${product.slug}`}>{product[`name_${lang}`]}</Link>
-          </h3>
+        <h3 className="product-name" title={product[`name_${lang}`]}>
+          <Link href={`/product/${product.slug}`}>{product[`name_${lang}`]}</Link>
+        </h3>
+        
+        <div className="product-bottom-row">
           <div className="product-price" style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>
             {isSale && <span className="price-original">{originalPrice} JOD</span>}
             <span className="price-current">{isVariant ? `From ` : ''}{currentPrice} JOD</span>
           </div>
+          
+          <button 
+            className="btn-order" 
+            onClick={handleAddToCart}
+            disabled={isOutOfStock}
+          >
+            {isOutOfStock ? t('product.out_of_stock') : `+ ${t('product.add_to_cart')}`}
+          </button>
         </div>
-        
-        <button 
-          className="btn-text-link" 
-          onClick={handleAddToCart}
-          disabled={isOutOfStock}
-          style={isOutOfStock ? { opacity: 0.5, cursor: 'not-allowed' } : {}}
-        >
-          {isOutOfStock ? t('product.out_of_stock') : `+ ${t('product.add_to_cart')}`}
-        </button>
       </div>
     </div>
   );

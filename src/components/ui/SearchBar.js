@@ -43,7 +43,7 @@ export default function SearchBar() {
       const { data, error } = await supabase
         .from('products')
         .select('id, name_en, name_ar, slug, image_url, base_price')
-        .or(`name_en.ilike.%${query}%,name_ar.ilike.%${query}%`)
+        .or(`name_en.ilike.%${query}%,name_ar.ilike.%${query}%,description_en.ilike.%${query}%,description_ar.ilike.%${query}%,ingredients_en.ilike.%${query}%,ingredients_ar.ilike.%${query}%,benefits_en.ilike.%${query}%,benefits_ar.ilike.%${query}%,usage_instructions_en.ilike.%${query}%,usage_instructions_ar.ilike.%${query}%`)
         .eq('is_active', true)
         .limit(5);
         

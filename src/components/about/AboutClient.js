@@ -13,13 +13,13 @@ export default function AboutClient({ settings }) {
       <section className="about-hero animate-fade-in-up">
         <div className="container" style={{ textAlign: 'center' }}>
           <p className="tracking-label" style={{ color: 'var(--color-accent)', marginBottom: 'var(--space-2)' }}>
-            {lang === 'ar' ? 'عن ليسيل' : 'OUR HERITAGE'}
+            {lang === 'ar' ? 'عن رويال للعطور' : 'OUR HERITAGE'}
           </p>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', marginBottom: 'var(--space-4)', letterSpacing: '-0.02em' }}>
             {t('nav.about') || 'About Us'}
           </h1>
           <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--color-text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
-            {lang === 'ar' ? 'اكتشف جوهر وفلسفة ليسيل للعطور.' : 'Discover the essence and craftsmanship behind Leciel Fragrance.'}
+            {lang === 'ar' ? 'اكتشف جوهر وفلسفة رويال للعطور.' : 'Discover the essence and craftsmanship behind ROYAL PERFUME.'}
           </p>
         </div>
       </section>
@@ -33,9 +33,9 @@ export default function AboutClient({ settings }) {
               {lang === 'ar' ? 'قصتنا' : 'Our Story'}
             </h2>
           </div>
-          <div 
+          <div
             style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-base)', lineHeight: 1.8 }}
-            dangerouslySetInnerHTML={{ __html: settings[`about_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }} 
+            dangerouslySetInnerHTML={{ __html: settings[`about_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }}
           />
         </section>
 
@@ -47,9 +47,9 @@ export default function AboutClient({ settings }) {
               {lang === 'ar' ? 'مهمتنا' : 'Our Mission'}
             </h2>
           </div>
-          <div 
+          <div
             style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-base)', lineHeight: 1.8 }}
-            dangerouslySetInnerHTML={{ __html: settings[`mission_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }} 
+            dangerouslySetInnerHTML={{ __html: settings[`mission_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }}
           />
         </section>
 
@@ -62,9 +62,9 @@ export default function AboutClient({ settings }) {
                 {lang === 'ar' ? 'الامتثال والأخلاق' : 'Compliance & Ethics'}
               </h2>
             </div>
-            <div 
+            <div
               style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-base)', lineHeight: 1.8 }}
-              dangerouslySetInnerHTML={{ __html: settings[`compliance_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }} 
+              dangerouslySetInnerHTML={{ __html: settings[`compliance_text_${lang}`]?.replace(/\n/g, '<br/>') || '' }}
             />
           </section>
         )}

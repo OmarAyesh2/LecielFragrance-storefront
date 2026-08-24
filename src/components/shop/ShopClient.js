@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import FilterBar from './FilterBar';
 import SortDropdown from './SortDropdown';
@@ -9,12 +9,17 @@ import ProductGrid from './ProductGrid';
 
 export default function ShopClient({ initialProducts, categories }) {
   const { lang, t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+
   const initialCategory = searchParams.get('category') || 'all';
+  const initialSort = searchParams.get('sort') || 'bestsellers';
+  const initialStock = searchParams.get('stock') === 'true' || searchParams.get('in_stock') === 'true';
 
   const [activeCategory, setActiveCategory] = useState(initialCategory);
-  const [sortOption, setSortOption] = useState('bestsellers');
-  const [inStockOnly, setInStockOnly] = useState(false);
+  const [sortOption, setSortOption] = useState(initialSort);
+  const [inStockOnly, setInStockOnly] = useState(initialStock);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -22,11 +27,56 @@ export default function ShopClient({ initialProducts, categories }) {
   }, []);
 
   useEffect(() => {
-    const cat = searchParams.get('category');
-    if (cat) {
-      setActiveCategory(cat);
-    }
+    const cat = searchParams.get('category') || 'all';
+    const sort = searchParams.get('sort') || 'bestsellers';
+    const stock = searchParams.get('stock') === 'true' || searchParams.get('in_stock') === 'true';
+
+    setActiveCategory(cat);
+    setSortOption(sort);
+    setInStockOnly(stock);
   }, [searchParams]);
+
+  const updateUrl = useCallback((newCategory, newSort, newStock) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (newCategory && newCategory !== 'all') {
+      params.set('category', newCategory);
+    } else {
+      params.delete('category');
+    }
+
+    if (newSort && newSort !== 'bestsellers') {
+      params.set('sort', newSort);
+    } else {
+      params.delete('sort');
+    }
+
+    if (newStock) {
+      params.set('stock', 'true');
+    } else {
+      params.delete('stock');
+      params.delete('in_stock');
+    }
+
+    const queryString = params.toString();
+    const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
+    router.replace(newUrl, { scroll: false });
+  }, [pathname, router, searchParams]);
+
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat);
+    updateUrl(cat, sortOption, inStockOnly);
+  };
+
+  const handleSortChange = (sort) => {
+    setSortOption(sort);
+    updateUrl(activeCategory, sort, inStockOnly);
+  };
+
+  const handleStockChange = (stock) => {
+    setInStockOnly(stock);
+    updateUrl(activeCategory, sortOption, stock);
+  };
 
   const filteredProducts = useMemo(() => {
     let result = [...initialProducts];
@@ -80,13 +130,13 @@ export default function ShopClient({ initialProducts, categories }) {
         <FilterBar 
           categories={categories} 
           activeCategory={activeCategory} 
-          setActiveCategory={setActiveCategory} 
+          setActiveCategory={handleCategoryChange} 
         />
         <SortDropdown 
           sortOption={sortOption} 
-          setSortOption={setSortOption} 
+          setSortOption={handleSortChange} 
           inStockOnly={inStockOnly}
-          setInStockOnly={setInStockOnly}
+          setInStockOnly={handleStockChange} 
         />
       </div>
 

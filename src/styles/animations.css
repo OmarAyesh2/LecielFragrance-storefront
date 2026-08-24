@@ -33,6 +33,17 @@
   100% { background-position: 1000px 0; }
 }
 
+@keyframes toastSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .animate-fade-in, .animate-fadeIn { animation: fadeIn var(--transition-base) forwards; }
 .animate-fade-in-up, .animate-fadeInUp { animation: fadeInUp var(--transition-base) forwards; }
 .animate-slide-in-right, .animate-slideInRight { animation: slideInRight var(--transition-base) forwards; }

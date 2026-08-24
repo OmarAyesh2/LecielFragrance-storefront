@@ -76,6 +76,9 @@ export default function Footer() {
 
       <div className="container footer-bottom" style={{ paddingTop: '2rem' }}>
         <p>&copy; {new Date().getFullYear()} {settings ? settings[`store_name_${lang}`] : 'Leciel Fragrance'}. {t('footer.rights')}.</p>
+        <p style={{ marginTop: '0.5rem', fontSize: '0.9em' }}>
+          Developed by <a href="https://eagleon.digital" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-text-primary)', fontWeight: '500' }}>EagleOn</a>
+        </p>
       </div>
     </footer>
   );

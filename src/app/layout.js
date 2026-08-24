@@ -15,22 +15,17 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' });
 
 export async function generateMetadata() {
-  const { data } = await supabase.from('site_settings').select('store_name_en').eq('id', 1).single();
+  const { data } = await supabase.from('site_settings').select('store_name_en, favicon_url').eq('id', 1).single();
   return {
     title: data?.store_name_en || 'Leciel Fragrance',
     description: 'Luxury Fragrance Storefront',
+    icons: data?.favicon_url ? { icon: data.favicon_url } : undefined,
   };
 }
 
-export default async function RootLayout({ children }) {
-  const { data } = await supabase.from('site_settings').select('favicon_url').eq('id', 1).single();
-  const faviconUrl = data?.favicon_url;
-
+export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <head>
-        {faviconUrl && <link rel="icon" href={faviconUrl} />}
-      </head>
       <body className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
         <LanguageProvider>
           <AuthProvider>
