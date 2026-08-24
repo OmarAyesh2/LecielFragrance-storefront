@@ -57,47 +57,53 @@ export default function SearchBar() {
   }, [query]);
 
   return (
-    <div className="search-container" ref={containerRef}>
-      {!isOpen ? (
-        <button className="icon-btn" onClick={() => setIsOpen(true)}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-      ) : (
-        <input 
-          type="text" 
-          className="search-input"
-          placeholder={t('nav.search_placeholder')}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          autoFocus
-        />
-      )}
-      
-      {isOpen && query && (
-        <div className="search-results">
-          {loading && <div className="p-3 text-center">{t('nav.loading') || '...'}</div>}
-          {!loading && results.length === 0 && (
-            <div className="p-3 text-center">{t('shop.no_products')}</div>
-          )}
-          {results.map(product => (
-            <Link 
-              key={product.id} 
-              href={`/product/${product.slug}`}
-              className="search-result-item"
-              onClick={() => setIsOpen(false)}
-            >
-              {product.image_url && (
-                <img src={product.image_url} alt={product[`name_${lang}`]} className="search-result-img" />
+    <div className={`search-container ${isOpen ? 'is-open' : ''}`} ref={containerRef}>
+      <button 
+        className="icon-btn search-toggle-btn" 
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Search"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="search-dropdown-wrapper">
+          <input 
+            type="text" 
+            className="search-input"
+            placeholder={t('nav.search_placeholder')}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoFocus
+          />
+          
+          {query && (
+            <div className="search-results">
+              {loading && <div className="p-3 text-center">{t('nav.loading') || '...'}</div>}
+              {!loading && results.length === 0 && (
+                <div className="p-3 text-center">{t('shop.no_products')}</div>
               )}
-              <div>
-                <div style={{ fontWeight: 500 }}>{product[`name_${lang}`]}</div>
-                <div style={{ color: 'var(--color-accent)' }}>{product.base_price} JOD</div>
-              </div>
-            </Link>
-          ))}
+              {results.map(product => (
+                <Link 
+                  key={product.id} 
+                  href={`/product/${product.slug}`}
+                  className="search-result-item"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {product.image_url && (
+                    <img src={product.image_url} alt={product[`name_${lang}`]} className="search-result-img" />
+                  )}
+                  <div>
+                    <div style={{ fontWeight: 500 }}>{product[`name_${lang}`]}</div>
+                    <div style={{ color: 'var(--color-accent)' }}>{product.base_price} JOD</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

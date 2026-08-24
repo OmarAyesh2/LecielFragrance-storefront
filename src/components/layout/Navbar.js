@@ -73,7 +73,7 @@ export default function Navbar() {
         {/* Center: Logo */}
         <div className="nav-center">
           <Link href="/" className="logo" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
-            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} style={{ height: '36px', maxWidth: '140px', objectFit: 'contain' }} /> : (storeName[lang] || 'AL-KHAROUF')}
+            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
           </Link>
         </div>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
           <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
-            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} style={{ height: '36px', maxWidth: '140px', objectFit: 'contain' }} /> : (storeName[lang] || 'AL-KHAROUF')}
+            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
           </span>
           <button className="icon-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
