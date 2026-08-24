@@ -62,6 +62,12 @@ export default function Navbar() {
             </svg>
           </button>
 
+          <div className="mobile-only">
+            <Link href="/" className="logo" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
+              {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
+            </Link>
+          </div>
+
           <div className="nav-links">
             <Link href="/">{t('nav.home')}</Link>
             <Link href="/shop">{t('nav.shop')}</Link>
@@ -120,6 +126,10 @@ export default function Navbar() {
           <Link href="/shop" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.shop')}</Link>
           <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.about')}</Link>
           <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.contact')}</Link>
+          
+          <div className="mobile-lang-switcher">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </nav>
