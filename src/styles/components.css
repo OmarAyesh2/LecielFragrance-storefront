@@ -1090,7 +1090,7 @@
 
 .btn-order {
   background: var(--color-text-primary);
-  color: #0d0d0d;
+  color: #FFFFFF;
   border: none;
   border-radius: var(--radius-sm);
   padding: var(--space-2);
@@ -1308,7 +1308,7 @@
 }
 
 .about-card:hover {
-  border-color: rgba(196, 160, 104, 0.3);
+  border-color: rgba(212, 130, 155, 0.3);
   transform: translateY(-2px);
 }
 
@@ -1349,7 +1349,7 @@
 
 .contact-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(196, 160, 104, 0.3);
+  border-color: rgba(212, 130, 155, 0.3);
 }
 
 .contact-icon {
@@ -1389,7 +1389,7 @@ select.form-input {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: var(--color-bg-secondary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C4A068' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D4829B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 16px;
@@ -1750,12 +1750,12 @@ select.form-input {
 }
 
 .radio-label:hover {
-  border-color: rgba(196, 160, 104, 0.4);
+  border-color: rgba(212, 130, 155, 0.4);
 }
 
 .radio-label:has(input:checked) {
   border-color: var(--color-accent);
-  background: rgba(196, 160, 104, 0.08);
+  background: rgba(212, 130, 155, 0.08);
   box-shadow: 0 0 0 1px var(--color-accent);
 }
 
@@ -1872,9 +1872,9 @@ select.form-input {
 }
 
 .status-pending {
-  background: rgba(196, 160, 104, 0.15);
+  background: rgba(212, 130, 155, 0.15);
   color: var(--color-accent);
-  border: 1px solid rgba(196, 160, 104, 0.3);
+  border: 1px solid rgba(212, 130, 155, 0.3);
 }
 
 .status-processing {
