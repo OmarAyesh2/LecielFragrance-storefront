@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [storeName, setStoreName] = useState({ en: 'ROYAL PERFUME', ar: 'رويال للعطور' });
+  const [storeName, setStoreName] = useState({ en: 'LE CIEL FRAGRANCE', ar: 'لو سيل للعطور' });
   const [logoUrl, setLogoUrl] = useState(null);
 
   const { lang, t } = useLanguage();
@@ -64,7 +64,7 @@ export default function Navbar() {
 
           <div className="mobile-only">
             <Link href="/" className="logo" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
-              {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
+              {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'LE CIEL FRAGRANCE')}
             </Link>
           </div>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
         {/* Center: Logo */}
         <div className="nav-center">
           <Link href="/" className="logo" style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
-            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
+            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'LE CIEL FRAGRANCE')}
           </Link>
         </div>
 
@@ -112,7 +112,7 @@ export default function Navbar() {
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
           <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 600 }}>
-            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'ROYAL PERFUME')}
+            {logoUrl ? <img src={logoUrl} alt={storeName[lang]} className="nav-logo-img" /> : (storeName[lang] || 'LE CIEL FRAGRANCE')}
           </span>
           <button className="icon-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

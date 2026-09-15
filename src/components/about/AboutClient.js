@@ -19,7 +19,7 @@ export default function AboutClient({ settings }) {
             {t('nav.about') || 'About Us'}
           </h1>
           <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--color-text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
-            {lang === 'ar' ? 'اكتشف جوهر وفلسفة رويال للعطور.' : 'Discover the essence and craftsmanship behind ROYAL PERFUME.'}
+            {lang === 'ar' ? 'اكتشف جوهر وفلسفة لو سيل للعطور.' : 'Discover the essence and craftsmanship behind LE CIEL FRAGRANCE.'}
           </p>
         </div>
       </section>

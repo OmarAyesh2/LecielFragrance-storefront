@@ -92,6 +92,7 @@
   .desktop-only {
     display: inherit !important;
   }
+
   .mobile-only {
     display: none !important;
   }
@@ -1089,8 +1090,8 @@
 }
 
 .btn-order {
-  background: var(--color-text-primary);
-  color: #FFFFFF;
+  background: var(--color-accent);
+  color: #0A0A0A;
   border: none;
   border-radius: var(--radius-sm);
   padding: var(--space-2);
@@ -1116,6 +1117,7 @@
 
 .btn-order:hover:not(:disabled) {
   background: var(--color-accent-hover);
+  color: #0A0A0A;
   transform: translateY(-1px);
 }
 
@@ -1142,7 +1144,7 @@
   width: 36px;
   height: 36px;
   background: var(--color-accent);
-  color: #ffffff;
+  color: #0A0A0A;
   border: none;
   border-radius: var(--radius-sm);
   display: flex;
