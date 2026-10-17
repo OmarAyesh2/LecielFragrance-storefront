@@ -1,21 +1,21 @@
 :root {
-  /* Color Palette - Luxurious Black & Gold Theme */
-  --color-bg-primary: #0A0A0A;
-  --color-bg-secondary: #121212;
-  --color-bg-tertiary: #1A1A1A;
-  --color-surface: #141414;
-  --color-border: #2A2A2A;
-  --color-border-hover: #D4AF37;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #A0A0A0;
-  --color-text-tertiary: #666666;
-  --color-accent: #D4AF37;
-  --color-accent-hover: #F3E5AB;
-  --color-accent-muted: rgba(212, 175, 55, 0.12);
+  /* Color Palette - Dental Clinic Theme */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F4F9FB;
+  --color-bg-tertiary: #E8F2F6;
+  --color-surface: #FFFFFF;
+  --color-border: #D0E1EA;
+  --color-border-hover: #0AB1CE;
+  --color-text-primary: #12243D;
+  --color-text-secondary: #2D88A6;
+  --color-text-tertiary: #5A758C;
+  --color-accent: #0AB1CE;
+  --color-accent-hover: #008DA6;
+  --color-accent-muted: rgba(10, 177, 206, 0.12);
   
-  /* Glassmorphism for dark & gold theme */
-  --glass-bg: rgba(20, 20, 20, 0.85);
-  --glass-border: 1px solid rgba(212, 175, 55, 0.18);
+  /* Glassmorphism for light & blue theme */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: 1px solid rgba(10, 177, 206, 0.18);
   --color-success: #15803D;
   --color-error: #B91C1C;
   --color-warning: #D97706;
@@ -39,12 +39,12 @@
   --space-20: 5rem;
   --space-24: 6rem;
 
-  /* Shadows - Dark shadows with subtle gold glow */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.15);
+  /* Shadows - Light shadows with subtle blue glow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(10, 177, 206, 0.15);
 
   /* Border Radius */
   --radius-sm: 4px;
